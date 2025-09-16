@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+        /* Container for all projects */
+        
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        /* Each project card */
+        
+        .project {
+            background: white;
+            width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            /* side by side image and description */
+            align-items: center;
+            padding: 15px;
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+        /* Animation delay for nice stagger effect */
+        
+        .project:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        
+        .project:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        
+        .project:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        .project:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+        
+        .project-image-container {
+            position: relative;
+            width: 140px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .project-image-container img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-image-container:hover img {
+            transform: scale(1.1);
+        }
+        
+        .project-image-container:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hover-topic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 8px 10px;
+            background: rgba(0, 0, 0, 0.65);
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .project-image-container:hover .hover-topic {
+            opacity: 1;
+        }
+        
+        .description {
+            padding-left: 20px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.4;
+            flex: 1;
+        }
+        /* Responsive for smaller screens */
+        
+        @media (max-width: 720px) {
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project {
+                flex-direction: column;
+                width: 90%;
+                padding: 15px 10px;
+            }
+            .project-image-container {
+                width: 100%;
+                max-width: 320px;
+                margin-bottom: 12px;
+            }
+            .description {
+                padding-left: 0;
+            }
+        }
+        
+        .hover-topic {
+            background: rgba(0, 123, 255, 0.85);
+            color: #fff;
+        }
+        
+        .description {
+            color: #222;
+        }
+        
+        .project {
+            border-left: 5px solid #007BFF;
+        }
+        
+        body {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Projects</h1>
+
+    <div class="projects-container">
+
+        <div class="project">
+
+            <div class="project-image-container">
+                <img src="images/etsy img.jpg" alt="Project 1 Screenshot" />
+                <div class="hover-topic">Etsy</div>
+            </div>
+            <div class="description">
+                Etsy is an online marketplace where people around the world connect to buy and sell unique, handmade, vintage, and custom goods.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image-container">
+                <img src="images/calculator.jpg" alt="Project 2 Screenshot" />
+                <div class="hover-topic">Calculator</div>
+            </div>
+            <div class="description">
+                A calculator is an electronic or software device used to perform basic and advanced mathematical operations.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image-container">
+                <img src="images/calendar.jpg" alt="Project 3 Screenshot" />
+                <div class="hover-topic">Calendar</div>
+            </div>
+            <div class="description">
+                A calendar project is a way to show and organize days, weeks, and months.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image-container">
+                <img src="images/quiz.jpg" alt="Project 4 Screenshot" />
+                <div class="hover-topic">Quiz</div>
+            </div>
+            <div class="description">
+                This quiz covers the core concepts of HTML and CSS the building blocks of modern web design.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

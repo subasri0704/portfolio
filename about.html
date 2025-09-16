@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .about-section p {
+            max-width: 700px;
+            margin: 10px auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .skills {
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .skill {
+            background: black;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+            cursor: default;
+            color: white;
+        }
+        
+        .skill:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: black;
+        }
+        
+        .cta {
+            margin-top: 30px;
+        }
+        
+        .cta a {
+            text-decoration: none;
+            background: #ff9800;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .cta a:hover {
+            background: #e68900;
+        }
+        /* Animation for fade-in */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .about-section>* {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: #8b73c2;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .navbar {
+            background: rgba(34, 34, 34, 0.9);
+            color: #fff;
+            padding: 15px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(6px);
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .navbar:hover {
+            background: rgba(34, 34, 34, 1);
+        }
+        
+        .nav-brand {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .nav-brand:hover {
+            transform: scale(1.1);
+            color: #e67e22;
+        }
+        /* Navbar Menu */
+        
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background: #e67e22;
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .nav-menu li a:hover {
+            color: #e67e22;
+        }
+        
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Subasri</div>
+        <ul class="nav-menu">
+            <li><a href="port.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="view.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+    </nav>
+    <section class=" about-section ">
+
+        <h1>About me</h1>
+        <p>
+            I'm a passionate <strong>MERN Stack Web Developer</strong> who loves building responsive, user-friendly, and scalable applications. My journey started with curiosity for design and problem-solving, and today I’m focused on creating seamless
+            digital experiences.
+        </p>
+
+        <div class="skills ">
+            <div class="skill ">HTML</div>
+            <div class="skill ">CSS</div>
+            <div class="skill ">JavaScript</div>
+            <div class="skill ">React</div>
+            <div class="skill ">Node.js</div>
+            <div class="skill ">MongoDB</div>
+            <div class="skill ">MySQL</div>
+        </div>
+
+        <p>
+            Beyond coding, I enjoy exploring UI/UX design, collaborating on open-source projects, and continuously learning new technologies.
+        </p>
+
+</body>
+
+</html>
